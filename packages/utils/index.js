@@ -1,4 +1,12 @@
 /**
+ * 判断值具体类型
+ * 所有检测类型结果枚举:  "date","regexp","array","object","number","string","null","undefined","function"
+ */
+ export const u_getTypeof = (val) => {
+    const s = Object.prototype.toString.call(val)
+    return s.match(/\[object (.*?)\]/)[1].toLowerCase()
+  }
+/**
  * 前后端请求的字段映射
  * @param {string} target "BackEnd": 分隔符命名 转 小驼峰; "FontEnd": 驼峰 转 分隔符
  * 其中后端 业务接口命名如果有 下划线 用于前端view源码目录层级创建
