@@ -1,6 +1,6 @@
 {
   "name": "filter-form-table-modal",
-  "version": "4.2.1",
+  "version": "1.0.0",
   "description": "适用于中后台的 过滤表单-表格-弹窗(表单) 组件",
   "author": "gd <771747384@qq.com>",
   "scripts": {
@@ -68,7 +68,7 @@
     "vue-template-compiler": "2.6.10"
   },
   "bugs": {
-    "url": "https://github.com/PanJiaChen/vue-element-admin/issues"
+    "url": "https://github.com/ailuhaosi/filter-form-table-modal/issues"
   },
   "engines": {
     "node": ">=8.9",
@@ -82,7 +82,6 @@
   "keywords": [
     "vue",
     "admin",
-    "dashboard",
     "element-ui",
     "boilerplate",
     "admin-template",
@@ -97,6 +96,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PanJiaChen/vue-element-admin.git"
+    "url": "git+https://github.com/ailuhaosi/filter-form-table-modal.git"
   }
 }
