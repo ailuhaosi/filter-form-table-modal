@@ -136,6 +136,24 @@
               v-else-if="item.type==='Avatar' && !row[item.key]"
             />
 
+            <el-select
+            v-else-if="item.type==='Select'"
+              v-model="row[item.key]"
+              :style="getRowAttrVal(row,rowIdx,item,['componentAttr','style'],{})"
+              :placeholder="getRowAttrVal(row,rowIdx,item,['componentAttr','placeholder'],'')"
+              :multiple="getRowAttrVal(row,rowIdx,item,['componentAttr','multiple'],false)"
+              :collapse-tags="getRowAttrVal(row,rowIdx,item,['componentAttr','collapse-tags'],false)"
+              :disabled="getRowAttrVal(row,rowIdx,item,['componentAttr','disabled'],false)"
+              v-on="optionChainHack(item,['events'],(rowIdx,colIdx,colKey)=>({}))(rowIdx,colIdx,item.key)"
+          >
+            <el-option
+              v-for="option in item.options"
+              :key="option.value"
+              :label="option.label"
+              :value="option.value"
+            />
+          </el-select>
+          
             <!-- 用于表格ceil较复杂时,比slot更优雅 -->
             <!-- 这里如果要定制行样式,可以根据 rowIdx 来写 -->
             <customize-table-ceil-async-load
