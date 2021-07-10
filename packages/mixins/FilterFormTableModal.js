@@ -240,7 +240,7 @@ export const FilterFormTableModal = function(
       /** formAboveTable 显示隐藏逻辑 */
       mixins_toggledShowFormAboveTable(eventFromKey) {
         // 受控显示隐藏的key常量数组
-        const CanToggledShowStatusKeys = this.formAboveTableCanToggledShowStatusKeys();
+        const CanToggledShowStatusKeys = this.formAboveTableCanToggledShowStatusKeys;
 
         if (CanToggledShowStatusKeys.length === 0) {
           return;
